@@ -1,0 +1,35 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/ban-types": [
+        "error",
+        {
+          "types": {
+            "Object": {
+              "message": "Avoid using the `Object` type. Did you mean `object`?"
+            },
+            "{}": {
+              "message": "Avoid using the `{}` type. Did you mean `object`?"
+            },
+            "Function": {
+              "message": "Avoid using the `Function` type. Prefer a specific function type, like `() => void`."
+            }
+          }
+        }
+      ]
+    }
+  }
+  
